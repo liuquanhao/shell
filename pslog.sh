@@ -1,0 +1,1 @@
+while true; do (echo "%CPU %MEM ARGS $(date)" && ps -e -o pcpu,pmem,args --sort=pcpu | cut -d" " -f1-5 | tail) >> /home/liuxuzzz/.log/`date +%Y%m%d`_ps.log; sleep 5; done
